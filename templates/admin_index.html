@@ -37,31 +37,42 @@
                             <table id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>First name</th>
-                                        <th>Last name</th>
+                                        <th>Id</th>
+                                        <th>Ordered Item</th>
+                                        <th>Ordered Qty </th>
+                                        <th>Ordered By</th>
                                         <th>Phone</th>
-                                        <th>No. Of guests</th>
-                                        <th>Date</th>
-                                        <th>Time</th>
+                                        <th>Order Status</th>
+                                        <th>Order Date/time</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for i in items %}
                                     <tr>
-                                        <td>Chandan</td>
-                                        <td>Gupta</td>
-                                        <td>6381387364</td>
-                                        <td>2</td>
-                                        <td>15.12.2023</td>
-                                        <td>8 PM</td>
+                                        <td>{{ i.id }}</td>
+                                        <td>{{ i.itemName }}</td>
+                                        <td>{{ i.itemQty }}</td>
+                                        <td>{{ i.orderedBy }}</td>
+                                        <td>{{ i.phoneNumber }}</td>
+                                        <td>{{ i.orderStatus }}</td>
+                                        <td>{{ i.orderDate }}</td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center gap-3">
+                                                <button data-bs-toggle="modal" data-bs-target="#editItemModal"
+                                                  class="btn btn-success btn-sm">Confirm</button>
+                        
+                                             
+                        
+                                                <button data-bs-toggle="modal" data-bs-target="#deleteItemModal"
+                                                  class="btn btn-danger btn-sm">Reject</button>
+                        
+                                             
+                                              </div>
+                                        </td>
+                                      
                                     </tr>
-                                    <tr>
-                                        <td>Chandan</td>
-                                        <td>Gupta</td>
-                                        <td>6381387364</td>
-                                        <td>2</td>
-                                        <td>15.12.2023</td>
-                                        <td>8 PM</td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
 

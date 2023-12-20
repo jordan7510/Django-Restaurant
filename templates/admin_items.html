@@ -40,7 +40,7 @@
                 </div>
                 <div class="modal-body">
                   <!-- Your form fields go here -->
-                  <form id="addItemForm" method="POST" action="{% url 'adminitems' %}">
+                  <form id="addItemForm" method="POST" action="{% url 'adminitems' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="mb-3">
                       <label for="item_name" class="form-label">Item Name</label>
@@ -61,6 +61,9 @@
                     <div class="mb-3">
                       <label for="item_price" class="form-label">Item price</label>
                       <input type="number" class="form-control" id="item_price" name="item_price" />
+                    </div>
+                    <div class="mb-3">
+                      <input type="file" class="form-control" id="item_image" name="item_image" />
                     </div>
                     <button type="submit" class="btn btn-primary">Save</button>
                   </form>
@@ -95,6 +98,10 @@
                       <span class="d-flex align-items-center justify-content-center">Item Price</span>
                     </th>
                     <th>
+                      <span class="d-flex align-items-center justify-content-center">Item Image
+                      </span>
+                    </th>
+                    <th>
                       <span class="d-flex align-items-center justify-content-center">Actions</span>
                     </th>
                   </tr>
@@ -107,6 +114,8 @@
                     <td>{{ item.item_desc }}</td>
                     <td>{{ item.item_type }}</td>
                     <td>{{ item.item_price }}</td>
+                    <td class="text-center "><img class="img-fluid " height="100px" width="100px"
+                        src="{{ item.item_image }}" alt=""></td>
                     <td>
                       <div class="d-flex align-items-center justify-content-center gap-3">
                         <button data-bs-toggle="modal" data-bs-target="#editItemModal{{item.id}}"
@@ -127,7 +136,8 @@
                               </div>
 
                               <div class="modal-body">
-                                <form id="editItemForm{{item.id}}" method="POST" action="{% url 'adminitems-edit' item.id %}">
+                                <form id="editItemForm{{item.id}}" method="POST"
+                                  action="{% url 'adminitems-edit' item.id %}" enctype="multipart/form-data">
                                   {% csrf_token %}
 
                                   <div class="mb-3">
@@ -156,8 +166,12 @@
 
                                   <div class="mb-3">
                                     <label for="item_price" class="form-label">Item price</label>
-                                    <input value="{{item.item_price}}" type="number" class="form-control" id="item_price"
-                                      name="item_price" />
+                                    <input value="{{item.item_price}}" type="number" class="form-control"
+                                      id="item_price" name="item_price" />
+                                  </div>
+
+                                  <div class="mb-3">
+                                    <input type="file" class="form-control" id="item_image" name="item_image" />
                                   </div>
                                   <button type="submit" class="btn btn-primary">Save</button>
                                 </form>
@@ -188,7 +202,8 @@
                                   <h5 for="itemName" class="form-label">Are you sure ? Do you want to delete ?</h5>
                                 </div>
                                 <div class="text-center ">
-                                  <form id="deleteItemModal{{item.id}}Label" method="POST" action="{% url 'adminitems-delete' item.id %}" >
+                                  <form id="deleteItemModal{{item.id}}Label" method="POST"
+                                    action="{% url 'adminitems-delete' item.id %}">
                                     <button type="submit" class="btn btn-danger">
                                       Delete
                                     </button>
@@ -236,6 +251,54 @@
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
     crossorigin="anonymous"></script>
   <script src="{% static 'admin/js/datatables-simple-demo.js' %}"></script>
+
+  <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
+
+  <!-- Script for SweetAlert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Add item for script -->
+  <!-- <script>
+    function addItem() {
+      var addItemForm = $("#addItemForm");
+      var formData = new FormData(addItemForm[0]);
+
+      formData.append('csrfmiddlewaretoken', $('input[name=csrfmiddlewaretoken]').val());
+
+      $.ajax({
+        type: addItemForm.attr("method"),
+        url: addItemForm.attr("action"),
+        data: addItemForm.serialize(),
+        processData: false,
+        contentType: false,
+        success: function (data) {
+          console.log("Item added successfully", data);
+          addItemForm[0].reset();
+          showPopup("Item added successfully.", "success");
+
+        },
+        error: function (error) {
+          console.log("Add item error", error);
+          showPopup("Add item error.", "error");
+        }
+      })
+
+    }
+
+    // Show popup function
+    function showPopup(message, icon) {
+      Swal.fire({
+        position: "center",
+        icon: icon,
+        title: message,
+        showConfirmButton: true,
+        timer: 3000
+      });
+    }
+
+  </script> -->
+
+
 </body>
 
 </html>

@@ -1,50 +1,52 @@
 <!doctype html>
 {% load static %}
-{% include 'includes/header.html' %} 
+{% include 'includes/header.html' %}
 <html class="no-js" lang="en">
 
 <!-- Mirrored from themearth.com/demo/html/restaura/view/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Dec 2023 03:35:17 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- The above 3 meta tags *must* come first in the head -->
 
     <!-- SITE TITLE -->
     <title>Restaura</title>
-    <meta name="description" content="Responsive Restaura HTML5 Template"/>
-    <meta name="keywords" content="Bootstrap3, restaurant, food, cafe, Template, bakery , Responsive, HTML5"/>
-    <meta name="author" content="themearth.com"/>
+    <meta name="description" content="Responsive Restaura HTML5 Template" />
+    <meta name="keywords" content="Bootstrap3, restaurant, food, cafe, Template, bakery , Responsive, HTML5" />
+    <meta name="author" content="themearth.com" />
 
     <!-- twitter card starts from here, if you don't need remove this section -->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@yourtwitterusername"/>
-    <meta name="twitter:creator" content="@yourtwitterusername"/>
-    <meta name="twitter:url" content="http://yourdomain.com/"/>
-    <meta name="twitter:title" content="Your home page title, max 140 char"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yourtwitterusername" />
+    <meta name="twitter:creator" content="@yourtwitterusername" />
+    <meta name="twitter:url" content="http://yourdomain.com/" />
+    <meta name="twitter:title" content="Your home page title, max 140 char" />
     <!-- maximum 140 char -->
-    <meta name="twitter:description" content="Your site description, maximum 140 char "/>
+    <meta name="twitter:description" content="Your site description, maximum 140 char " />
     <!-- maximum 140 char -->
-    <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-280-150.jpg"/>
+    <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-280-150.jpg" />
     <!-- when you post this page url in twitter , this image will be shown -->
     <!-- twitter card ends from here -->
 
     <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-    <meta property="og:title" content="Your home page title"/>
-    <meta property="og:url" content="http://your domain here.com"/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="og:site_name" content="Your site name here"/>
-    <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content="assets/img/opengraph/fbphoto.jpg"/>
+    <meta property="og:title" content="Your home page title" />
+    <meta property="og:url" content="http://your domain here.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Your site name here" />
+    <!--meta property="fb:admins" content="" /--> <!-- use this if you have  -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/opengraph/fbphoto.jpg" />
     <!-- when you post this page url in facebook , this image will be shown -->
     <!-- facebook open graph ends from here -->
 
     <!--  FAVICON AND TOUCH ICONS -->
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico'%}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico'%}" />
     <!-- this icon shows in browser toolbar -->
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}"/>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
     <!-- this icon shows in browser toolbar -->
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png'%}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png'%}">
@@ -62,1083 +64,883 @@
     <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json'%}">
 
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css'%}" media="all"/>
+    <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css'%}" media="all" />
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="{% static 'assets/libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
+    <link rel="stylesheet" href="{% static 'assets/libs/fontawesome/css/font-awesome.min.css' %}" media="all" />
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="{% static 'assets/libs/maginificpopup/magnific-popup.css'%}" media="all"/>
+    <link rel="stylesheet" href="{% static 'assets/libs/maginificpopup/magnific-popup.css'%}" media="all" />
 
     <!-- OWL CAROUSEL CSS -->
     <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.carousel.min.css'%}" media="all" />
     <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.theme.default.min.css'%}" media="all" />
 
     <!-- GOOGLE FONT -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900%7cRaleway:300,400,400i,500,600,700,900"/>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900%7cRaleway:300,400,400i,500,600,700,900" />
 
     <link rel="stylesheet" href="{% static 'assets/libs/animate/animate.css'%}" media="all" />
 
 
     <!-- bootstrap datepicker -->
-    <link rel="stylesheet" href="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.css'%}" media="all"/>
+    <link rel="stylesheet" href="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.css'%}" media="all" />
 
     <!-- MASTER  STYLESHEET  -->
-    <link id="lgx-master-style" rel="stylesheet" href="{% static 'assets/css/style-olive.min.css'%}" media="all"/>
+    <link id="lgx-master-style" rel="stylesheet" href="{% static 'assets/css/style-olive.min.css'%}" media="all" />
 
     <!-- MODERNIZER CSS  -->
     <script src="{% static 'assets/js/vendor/modernizr-2.8.3.min.js'%}"></script>
 
 </head>
+
 <body class="home">
 
-<!--[if lt IE 8]>
+    <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="lgx-container ">
-    
-<!-- ***  ADD YOUR SITE CONTENT HERE *** -->
+    <div class="lgx-container ">
+
+        <!-- ***  ADD YOUR SITE CONTENT HERE *** -->
 
 
-<!--BANNER-->
-<section>
-    <div class="lgx-banner lgx-banner2">
-        <div class="lgx-banner-style">
-            <div class="lgx-inner lgx-inner-fixed">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="lgx-banner-info lgx-banner-info-big"> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
-                                <h3 class="subtitle">Delicious Foods</h3>
-                                <h2 class="title">Specialty Of Foods</h2>
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor dolorem <br> laudantium officia voluptas. Aspernatur cupiditate ducimus eligendi reprehenderit!
-                                </p>
-                                <div class="btn-area">
-                                    <a class="lgx-scroll btn lgx-btn" href="#lgx-reservation"><span>Reservation</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--//.ROW-->
-                </div>
-                <!-- //.CONTAINER -->
-            </div>
-            <!-- //.INNER -->
-        </div>
-    </div>
-</section>
-<!--BANNER END-->
-
-
-<!--ABOUT-->
-<section class="section-gap">
-    <div id="lgx-about" class="lgx-about"> <!--lgx-about2 lgx-about-bottom-->
-        <div class="lgx-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-7">
-                        <div class="lgx-about-area">
-                            <div class="lgx-heading">
-                                <h2 class="heading-title">Restaurant History</h2>
-                            </div>
-                            <div class="lgx-about-content">
-                                <blockquote class="about">
-                                    Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque condimentum placerat.Integer egestas ullamcorper purus.
-                                </blockquote>
-                                <p class="text">
-                                    Pellentesque habitant morbi tristique senectus netus et malesuada fames turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper. Aenean are ultricies mi vitae est tristique senectus et netus et malesuada placerat leo.
-                                </p>
-                                <a class="btn lgx-btn lgx-btn-simple" href="about.html"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--//.ROW-->
-            </div>
-            <!-- //.CONTAINER -->
-        </div>
-        <!-- //.INNER -->
-    </div>
-</section>
-<!--ABOUT END-->
-
-
-
-<!--OFFER-->
-<section class="section-gap lgx-offer-section">
-    <div id="lgx-offer" class="lgx-offer">
-        <div class="lgx-inner">
-            <div id="lgx-owloffer" class="owl-carousel lgx-owloffer">
-
-                <div class="item">
-                    <div class="lgx-single-offer">
-                        <figure>
-                            <a href="#"><img src="{% static 'assets/img/offer-slide1.jpg'%}" alt="Offers"/></a>
-                        </figure>
-                        <div class="offer-info">
-                            <div class="offer-info-inner">
-                                <h2 class="title"><a href="#"><span>American Burger</span> 50% Offer on</a></h2>
-                                <ul class="list-unstyled offer-list">
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Offer for 2 days</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only 2 days</li>
-                                </ul>
-                                <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <!--//.Item-->
-
-                <div class="item">
-                    <div class="lgx-single-offer">
-                        <figure>
-                            <a href="#"><img src="{% static 'assets/img/offer-slide2.jpg'%}" alt="Offers"/></a>
-                        </figure>
-                        <div class="offer-info">
-                            <div class="offer-info-inner">
-                                <h2 class="title"><a href="#"><span>Pizza Zone</span>50% Offer on</a></h2>
-                                <ul class="list-unstyled offer-list">
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only 2 days</li>
-                                    <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer</li>
-                                </ul>
-                                <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!--//.Item-->
-
-                <div class="item">
-                    <div class="lgx-single-offer">
-                        <figure>
-                            <a href="#"><img src="{% static 'assets/img/offer-slide3.jpg'%}" alt="Offers"/></a>
-                        </figure>
-                        <div class="offer-info">
-                            <h2 class="title"><a href="#"><span>Subway Zone</span>50% Offer on</a></h2>
-                            <ul class="list-unstyled offer-list">
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only 2 days</li>
-                            </ul>
-                            <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
-                        </div>
-                    </div>
-                </div> <!--//.Item-->
-
-            </div><!--l//#lgx-OWL NEWS-->
-        </div>
-        <!-- //.INNER -->
-    </div>
-</section>
-<!--OFFER END-->
-
-
-
-
-<!--MENU ITEMS-->
-<section>
-    <div id="lgx-menu" class="lgx-menu"> <!--lgx-menu-white-->
-        <div class="lgx-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="lgx-heading lgx-heading-white">
-                        <h2 class="heading-title">Offerd Menu</h2>
-                        <h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
-                    </div>
-                </div>
-            </div>
-            <!--//.ROW-->
-        </div>
-            <div class="container-fluids section-gap">
-                <div class="lgx-tab lgx-tab-another"> <!--lgx-tab-another lgx-tab-another2-->
-                    <div class="lgx-filter-area">
-                        <ul id="lgx-filter" class="lgx-filter list-inline">
-                            <li class="active"><a class="lgx-filter-item" href="javascript:void(0)" data-filter="*">All Items<span>Fresh & Delicious</span></a></li>
-                            <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".breakfast">Pizza<span>Fresh & Delicious</span></a></li>
-                            <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".lunch">Soup <span>Fresh & Delicious</span></a></li>
-                            <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".dinner">Kabab<span>Fresh & Delicious</span></a></li>
-                            <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".drinks">Stack<span>Fresh & Delicious</span></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="lgx-menu-container">
-
-                        <div id="lgx-grid-wrapper" class="lgx-grid-wrapper lgx-grid-wrapper-gap"> <!--lgx-grid-wrapper-gap-->
-                            {% for item in items %}
-                            <div class="lgx-grid-item breakfast"> <!-- lgx-grid-item-col1 lgx-grid-item-col2 lgx-grid-item-col3 lgx-grid-item-col4-->
-                                <div class="lgx-single-menu-another">
-                                    <a href="#">
-                                        <figure>
-                                            <img src="{% static 'assets/img/menu/menu11.jpg'%}" alt="course">
-                                            <figcaption>
-
-                                            </figcaption>
-                                        </figure>
-                                        <div class="menu-info">
-                                            <div class="info-left">
-                                                <h3 class="title">{{item.item_name}}</h3>
-                                                <p class="text">{{item.item_desc}}</p>
-                                            </div>
-                                            <div class="menu-price">
-                                                <span>₹</span>{{item.item_price}}
-                                            </div>
+        <!--BANNER-->
+        <section>
+            <div class="lgx-banner lgx-banner2">
+                <div class="lgx-banner-style">
+                    <div class="lgx-inner lgx-inner-fixed">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="lgx-banner-info lgx-banner-info-big">
+                                        <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
+                                        <h3 class="subtitle">Delicious Foods</h3>
+                                        <h2 class="title">Specialty Of Foods</h2>
+                                        <p class="text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor
+                                            dolorem <br> laudantium officia voluptas. Aspernatur cupiditate ducimus
+                                            eligendi reprehenderit!
+                                        </p>
+                                        <div class="btn-area">
+                                            <a class="lgx-scroll btn lgx-btn"
+                                                href="#lgx-reservation"><span>Reservation</span></a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
-                            {% endfor %}
-                            <!--//ITEM-->
+                            <!--//.ROW-->
                         </div>
-
+                        <!-- //.CONTAINER -->
                     </div>
-
+                    <!-- //.INNER -->
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-    <!--//.MENU ITEMS END-->
+        </section>
+        <!--BANNER END-->
+
+
+        <!--ABOUT-->
+        <section class="section-gap">
+            <div id="lgx-about" class="lgx-about"> <!--lgx-about2 lgx-about-bottom-->
+                <div class="lgx-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-7">
+                                <div class="lgx-about-area">
+                                    <div class="lgx-heading">
+                                        <h2 class="heading-title">Restaurant History</h2>
+                                    </div>
+                                    <div class="lgx-about-content">
+                                        <blockquote class="about">
+                                            Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla,
+                                            non fringilla neque condimentum placerat.Integer egestas ullamcorper purus.
+                                        </blockquote>
+                                        <p class="text">
+                                            Pellentesque habitant morbi tristique senectus netus et malesuada fames
+                                            turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+                                            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                            ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper.
+                                            Aenean are ultricies mi vitae est tristique senectus et netus et malesuada
+                                            placerat leo.
+                                        </p>
+                                        <a class="btn lgx-btn lgx-btn-simple" href="about.html"><span>Read
+                                                More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//.ROW-->
+                    </div>
+                    <!-- //.CONTAINER -->
+                </div>
+                <!-- //.INNER -->
+            </div>
+        </section>
+        <!--ABOUT END-->
+
+
+
+        <!--OFFER-->
+        <section class="section-gap lgx-offer-section">
+            <div id="lgx-offer" class="lgx-offer">
+                <div class="lgx-inner">
+                    <div id="lgx-owloffer" class="owl-carousel lgx-owloffer">
+
+                        <div class="item">
+                            <div class="lgx-single-offer">
+                                <figure>
+                                    <a href="#"><img src="{% static 'assets/img/offer-slide1.jpg'%}" alt="Offers" /></a>
+                                </figure>
+                                <div class="offer-info">
+                                    <div class="offer-info-inner">
+                                        <h2 class="title"><a href="#"><span>American Burger</span> 50% Offer on</a></h2>
+                                        <ul class="list-unstyled offer-list">
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Offer for 2 days</li>
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer
+                                            </li>
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only
+                                                2 days</li>
+                                        </ul>
+                                        <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//.Item-->
+
+                        <div class="item">
+                            <div class="lgx-single-offer">
+                                <figure>
+                                    <a href="#"><img src="{% static 'assets/img/offer-slide2.jpg'%}" alt="Offers" /></a>
+                                </figure>
+                                <div class="offer-info">
+                                    <div class="offer-info-inner">
+                                        <h2 class="title"><a href="#"><span>Pizza Zone</span>50% Offer on</a></h2>
+                                        <ul class="list-unstyled offer-list">
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer
+                                            </li>
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only
+                                                2 days</li>
+                                            <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer</li>
+                                        </ul>
+                                        <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!--//.Item-->
+
+                        <div class="item">
+                            <div class="lgx-single-offer">
+                                <figure>
+                                    <a href="#"><img src="{% static 'assets/img/offer-slide3.jpg'%}" alt="Offers" /></a>
+                                </figure>
+                                <div class="offer-info">
+                                    <h2 class="title"><a href="#"><span>Subway Zone</span>50% Offer on</a></h2>
+                                    <ul class="list-unstyled offer-list">
+                                        <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer</li>
+                                        <li><i class="fa fa-check" aria-hidden="true"></i> Only Buy One Get On Offer
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true"></i> Buy One Get On Offer Only 2
+                                            days</li>
+                                    </ul>
+                                    <a class="btn lgx-btn lgx-btn-simple" href="#"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div> <!--//.Item-->
+
+                    </div><!--l//#lgx-OWL NEWS-->
+                </div>
+                <!-- //.INNER -->
+            </div>
+        </section>
+        <!--OFFER END-->
 
 
 
 
-<!--RESERVATION-->
-<section>
-    <div id="lgx-reservation" class="lgx-reservation lgx-reservation-another">
-        <div class="lgx-inner">
-            <div class="container grid">
-                <div class="row">
-
-                    <div class="col-md-6">
+        <!--MENU ITEMS-->
+        <section>
+            <div id="lgx-menu" class="lgx-menu"> <!--lgx-menu-white-->
+                <div class="lgx-inner">
+                    <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="lgx-heading">
-                                    <h2 class="heading-title">Book A Table</h2>
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading-title">Offerd Menu</h2>
                                     <h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="row ">
-                            <div class="col-md-12 col-sm-10">
-                                <div class="lgx-reservation-area lgx-reservation-area-another"> <!--lgx-reservation-area-another-->
-                                    <div class="open-close-time">
-                                        <p>Monday- Friday: <span>08am - 12pm</span></p>
-                                        <p>Saturday - Sunday: <span>10am - 11pm</span></p>
-                                    </div>
-                                    <form id="reservationbooking">
-                                        <div class="form-group  lgx-form-left">
-                                            <input class="form-control" name="fb_name" id="foodiebooking_name" placeholder="Enter Your Name" aria-required="true" type="text">
-                                        </div>
-                                        <div class="form-group lgx-form-right">
-                                            <input class="form-control" name="fb_email" id="foodiebooking_email" placeholder="Email Address" aria-required="true" type="email">
-                                        </div>
-                                        <div class="form-group lgx-form-left">
-                                            <input class="form-control" name="fb_phone" id="foodiebooking_phone" placeholder="Telephone Number" type="text">
-                                        </div>
-                                        <div class="form-group lgx-form-right">
-                                            <select class="form-control" name="fb_person" id="foodiebooking_person" aria-required="true">
-                                                <option value="">Number of Guests</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="8">9</option>
-                                                <option value="10">10</option>
-                                                <option value="more">More than 10</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group lgx-form-full lgx-form-left">
-                                            <div class="input-group date" id="datetimepicker">
-                                                <input name="fb_date" id="reservationbooking_date" class="form-control" placeholder="Date format ( mm-dd-yyyy )." aria-required="true" type="text">
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group lgx-form-right">
-                                            <select class="form-control" name="fb_time" id="foodiebooking_time" aria-required="true">
-                                                <option value="">Time</option>
-                                                <option value="1">Breakfast</option>
-                                                <option value="2">Lunch</option>
-                                                <option value="3">Dinner</option>
-                                            </select>
-                                        </div>
-                                        <div class="lgx-form-group">
-                                            <a class="btn lgx-btn" href="#"><span>Submit</span></a>
-                                        </div>
-        
-                                    </form>
-                                </div>
-                            </div>
-                            
-                        </div>
                         <!--//.ROW-->
                     </div>
-                    
-                    <div class="col-md-6">
+                    <div class="container-fluids section-gap">
+                        <div class="lgx-tab lgx-tab-another"> <!--lgx-tab-another lgx-tab-another2-->
+                            <div class="lgx-filter-area">
+                                <ul id="lgx-filter" class="lgx-filter list-inline">
+                                    <li class="active"><a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter="*">All Items<span>Fresh & Delicious</span></a></li>
+                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter=".breakfast">Pizza<span>Fresh & Delicious</span></a></li>
+                                    <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".lunch">Soup
+                                            <span>Fresh & Delicious</span></a></li>
+                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter=".dinner">Kabab<span>Fresh & Delicious</span></a></li>
+                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter=".drinks">Stack<span>Fresh & Delicious</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="lgx-menu-container">
+
+                                <div id="lgx-grid-wrapper" class="lgx-grid-wrapper lgx-grid-wrapper-gap">
+                                    <!--lgx-grid-wrapper-gap-->
+                                    {% for item in items %}
+                                    <div class="lgx-grid-item breakfast">
+                                        <!-- lgx-grid-item-col1 lgx-grid-item-col2 lgx-grid-item-col3 lgx-grid-item-col4-->
+                                        <div class="lgx-single-menu-another">
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="{{ item.item_image }}" alt="course">
+                                                    <figcaption>
+
+                                                    </figcaption>
+                                                </figure>
+                                                <div class="menu-info">
+                                                    <div class="info-left">
+                                                        <h3 class="title">{{item.item_name}}</h3>
+                                                        <p class="text">{{item.item_desc}}</p>
+                                                    </div>
+                                                    <div class="menu-price">
+                                                        <span>₹</span>{{item.item_price}}
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <!--//ITEM-->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//.MENU ITEMS END-->
+
+
+
+
+        <!--RESERVATION-->
+        <section>
+            <div id="lgx-reservation" class="lgx-reservation lgx-reservation-another">
+                <div class="lgx-inner">
+                    <div class="container grid">
+                        <div class="d-flex align-items-center  justify-content-center">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="lgx-heading">
+                                        <h2 class="heading-title">Book A Table</h2>
+                                        <h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-12 col-sm-10">
+                                    <div class="lgx-reservation-area lgx-reservation-area-another">
+                                        <!--lgx-reservation-area-another-->
+                                        <div class="open-close-time">
+                                            <p>Monday- Friday: <span>08am - 12pm</span></p>
+                                            <p>Saturday - Sunday: <span>10am - 11pm</span></p>
+                                        </div>
+                                        <form id="reservationbooking" method="POST"
+                                            action="{% url 'add-reservation' %}">
+                                            {% csrf_token %}
+                                            <div class="form-group  lgx-form-left">
+                                                <input required class="form-control" name="name" id="foodiebooking_name"
+                                                    placeholder="Enter Your Name" aria-required="true" type="text">
+                                            </div>
+                                            <div class="form-group lgx-form-right">
+                                                <input required class="form-control" name="email"
+                                                    id="foodiebooking_email" placeholder="Email Address"
+                                                    aria-required="true" type="email">
+                                            </div>
+                                            <div class="form-group lgx-form-left">
+                                                <input required class="form-control" name="phoneNumber"
+                                                    id="foodiebooking_phone" placeholder="Mobile Number" type="text">
+                                            </div>
+                                            <div class="form-group lgx-form-right">
+                                                <select required class="form-control" name="noOfGuests"
+                                                    id="foodiebooking_person" aria-required="true">
+                                                    <option value="" disabled selected hidden>Number of Guests
+                                                    </option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="8">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="more">More than 10</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group lgx-form-full lgx-form-left">
+                                                <div class="input-group date" id="datetimepicker">
+                                                    <input required name="reservationDate" id="reservationbooking_date"
+                                                        class="form-control" placeholder="Date format ( mm-dd-yyyy )."
+                                                        aria-required="true" type="text">
+
+                                                    <!-- <input required name="reservationDate" id="reservationbooking_date" type="date" format="YYYY-MM-DD" > -->
+
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group lgx-form-right">
+                                                <select required class="form-control" name="reservationTime"
+                                                    id="foodiebooking_time" aria-required="true">
+                                                    <option value="" disabled selected hidden>Time</option>
+                                                    <option value="Breakfast">Breakfast</option>
+                                                    <option value="Lunch">Lunch</option>
+                                                    <option value="Dinner">Dinner</option>
+                                                </select>
+                                            </div>
+                                            <div class="lgx-form-group">
+                                                <button class="btn lgx-btn text-light" type="button"
+                                                    onclick="submitForm()"><span>Submit</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--//.ROW-->
+                        </div>
+                    </div>
+                    <!-- //.CONTAINER -->
+                </div>
+                <!-- //.INNER -->
+            </div>
+        </section>
+        <!--RESERVATION END-->
+
+
+
+
+        <!--TESTIMONIALS -->
+        <section>
+            <div id="lgx-testimonial" class="lgx-testimonial">
+                <div class="lgx-inner">
+                    <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="lgx-heading">
-                                    <h2 class="heading-title">Order Now</h2>
-                                    <h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
+                                    <h2 class="heading-title">What Clients Say</h2>
+                                    <h4 class="heading-subtitle">Latest News Updates You Dont Miss Out!</h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12  col-sm-10">
-                                <div class="lgx-reservation-area lgx-reservation-area-another"> <!--lgx-reservation-area-another-->
-                                    <div class="open-close-time">
-                                        <p>Monday- Friday: <span>08am - 12pm</span></p>
-                                        <p>Saturday - Sunday: <span>10am - 11pm</span></p>
-                                    </div>
-                                    <form id="reservationbooking">
-                                        <div class="form-group  lgx-form-left">
-                                            <input class="form-control" name="fb_name" id="foodiebooking_name" placeholder="Enter Item Name" aria-required="true" type="text">
-                                        </div>
-                                        
-                                        <div class="form-group lgx-form-right">
-                                            <select class="form-control" name="fb_person" id="foodiebooking_person" aria-required="true">
-                                                <option value="">Enter Quentity</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="8">9</option>
-                                                <option value="10">10</option>
-                                                <option value="more">More than 10</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group lgx-form-full lgx-form-left">
-                                            <div class="input-group date" id="datetimepicker">
-                                                <input name="fb_date" id="reservationbooking_date" class="form-control" placeholder="Date format ( mm-dd-yyyy )." aria-required="true" type="text">
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group lgx-form-right">
-                                            <select class="form-control" name="fb_time" id="foodiebooking_time" aria-required="true">
-                                                <option value="">Time</option>
-                                                <option value="1">Breakfast</option>
-                                                <option value="2">Lunch</option>
-                                                <option value="3">Dinner</option>
-                                            </select>
-                                        </div>
-                                        <div >
-                                            <p class="text-light">This Order is Safe and Higin</p><br>
-                                            <p>We will reach you soon</p>
-                                        </div>
-                                        <div class="lgx-form-group">
-                                            <!--<input  class="lgx-btn lgx-submit" value="Booking Submit" type="submit">-->
-                                            <a class="btn lgx-btn" href="#"><span>Submit</span></a>
-                                        </div>
-        
-                                    </form>
-                                </div>
-                            </div>
-                            
                         </div>
                         <!--//.ROW-->
-                    </div>
+                        <div class="row">
+                            <div id="lgx-owltestimonial-box" class="lgx-owltestimonial lgx-owltestimonial-box">
 
-                </div>
+                                <div class="item">
+                                    <!--Testimonial-single-->
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et
+                                            porta
+                                            leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam
+                                            ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh
+                                            aliquet
+                                            rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote> <!--//.Testimonial-single-->
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <!--Testimonial-single-->
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et
+                                            porta
+                                            leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam
+                                            ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh
+                                            aliquet
+                                            rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote> <!--//.Testimonial-single-->
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <!--Testimonial-single-->
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et
+                                            porta
+                                            leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam
+                                            ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh
+                                            aliquet
+                                            rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote> <!--//.Testimonial-single-->
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <!--Testimonial-single-->
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et
+                                            porta
+                                            leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam
+                                            ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh
+                                            aliquet
+                                            rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote> <!--//.Testimonial-single-->
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <!--Testimonial-single-->
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et
+                                            porta
+                                            leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam
+                                            ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh
+                                            aliquet
+                                            rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote> <!--//.Testimonial-single-->
+                                </div> <!--//.Item-->
+                            </div><!--l//#lgx-OWL NEWS-->
+                        </div>
+                    </div><!-- //.CONTAINER -->
+                </div><!-- //.INNER -->
             </div>
-            <!-- //.CONTAINER -->
-        </div>
-        <!-- //.INNER -->
-    </div>
-</section>
-<!--RESERVATION END-->
+        </section>
+        <!--TESTIMONIALS END-->
 
 
 
-{% comment %} <!--team-->
-<section>
-    <div id="lgx-team" class="lgx-team">
-        <div class="lgx-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="lgx-heading">
-                            <h2 class="heading-title">Experienced Chefs</h2>
-                            <h4 class="heading-subtitle">Some Special Teachers From The Industry!</h4>
-                        </div>
-                    </div>
-                </div>
-                <!--//.ROW-->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-team"> <!--lgx-teacher-circle-->
-                            <figure>
-                                <a href="chef.html"><img src="{% static 'assets/img/team/team1.jpg'%}" alt="team"/></a>
-                                <figcaption>
-                                    <h3 class="teacher-name"><a href="chef.html">Enathon Jackson</a><span>Head of Chef</span></h3>
-                                    <div class="teacher-bottom">
-                                        <ul class="list-inline social-group">
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                        <a class="link" href="chef.html"><i class="fa  fa-long-arrow-right" aria-hidden="true"></i></a>
+        <!--NEWS-->
+        <section>
+            <div id="lgx-news" class="lgx-news">
+                <div class="lgx-inner">
+                    <div class="container">
+                        <div class="row">
+
+                            <div id="lgx-owlnews" class="lgx-owlnews">
+                                <div class="item">
+                                    <div class="lgx-news-single">
+                                        <div class="date">
+                                            <h4>Aug <span>17</span></h4>
+                                        </div>
+                                        <div class="news-info">
+                                            <h3 class="title"><a href="news-single.html">Brace for the oil, food and
+                                                    financial Crash of 2018</a></h3>
+                                            <p class="text">Yet the full, striking import of the report, concerning the
+                                                world’s permanent entry into a new age of global decline, was never
+                                                really
+                                                explained. The report didn’t just ...</p>
+                                            <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read
+                                                    More</span></a>
+                                        </div>
                                     </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-team"> <!--lgx-teacher-circle-->
-                            <figure>
-                                <a href="chef.html"><img src="{% static 'assets/img/team/team2.jpg'%}" alt="team"/></a>
-                                <figcaption>
-                                    <h3 class="teacher-name"><a href="chef.html">Eliana De suja</a><span>Head Chef</span></h3>
-                                    <div class="teacher-bottom">
-                                        <ul class="list-inline social-group">
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                        <a class="link" href="chef.html"><i class="fa  fa-long-arrow-right" aria-hidden="true"></i></a>
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <div class="lgx-news-single">
+                                        <div class="date">
+                                            <h4>Nov <span>12</span></h4>
+                                        </div>
+                                        <div class="news-info">
+                                            <h3 class="title"><a href="news-single.html">Why the Next President Will
+                                                    Need a
+                                                    National Food Policy</a></h3>
+                                            <p class="text">Yet the full, striking import of the report, concerning the
+                                                world’s permanent entry into a new age of global decline, was never
+                                                really
+                                                explained. The report didn’t just ...</p>
+                                            <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read
+                                                    More</span></a>
+                                        </div>
                                     </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-team">
-                            <figure>
-                                <a href="chef.html"><img src="{% static 'assets/img/team/team3.jpg'%}" alt="teacher"/></a>
-                                <figcaption>
-                                    <h3 class="teacher-name"><a href="chef.html">Devid Vaskar</a><span>General Chef</span></h3>
-                                    <div class="teacher-bottom">
-                                        <ul class="list-inline social-group">
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                        <a class="link" href="chef.html"><i class="fa  fa-long-arrow-right" aria-hidden="true"></i></a>
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <div class="lgx-news-single">
+                                        <div class="date">
+                                            <h4>Dec <span>14</span></h4>
+                                        </div>
+                                        <div class="news-info">
+                                            <h3 class="title"><a href="news-single.html">The Beginners Guide to
+                                                    Composition
+                                                    in Food Photography</a></h3>
+                                            <p class="text">Yet the full, striking import of the report, concerning the
+                                                world’s permanent entry into a new age of global decline, was never
+                                                really
+                                                explained. The report didn’t just ...</p>
+                                            <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read
+                                                    More</span></a>
+                                        </div>
                                     </div>
-                                </figcaption>
-                            </figure>
+                                </div> <!--//.Item-->
+                                <div class="item">
+                                    <div class="lgx-news-single">
+                                        <div class="date">
+                                            <h4>Oct <span>02</span></h4>
+                                        </div>
+                                        <div class="news-info">
+                                            <h3 class="title"><a href="news-single.html">Why our food is the single
+                                                    biggest
+                                                    election issue not on the table</a></h3>
+                                            <p class="text">Yet the full, striking import of the report, concerning the
+                                                world’s permanent entry into a new age of global decline, was never
+                                                really
+                                                explained. The report didn’t just ...</p>
+                                            <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read
+                                                    More</span></a>
+                                        </div>
+                                    </div>
+                                </div> <!--//.Item-->
+                            </div><!--l//#lgx-OWL NEWS-->
                         </div>
-                    </div>
-
-                </div>
+                    </div><!-- //.CONTAINER -->
+                </div><!-- //.INNER -->
             </div>
-            <!-- //.CONTAINER -->
-        </div>
-        <!-- //.INNER -->
-    </div>
-</section>
-<!--team END--> {% endcomment %}
+        </section>
+        <!--NEWS END-->
 
 
 
-<!--TESTIMONIALS -->
-<section>
-    <div id="lgx-testimonial" class="lgx-testimonial">
-        <div class="lgx-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="lgx-heading">
-                            <h2 class="heading-title">What Clients Say</h2>
-                            <h4 class="heading-subtitle">Latest News Updates You Dont Miss Out!</h4>
+
+        <!--PHOTO GALLERY-->
+
+        <section>
+            <div id="lgx-photo-gallery" class="lgx-photo-gallery">
+                <div id="lgx-owlgallery" class="lgx-owlgallery">
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img title="Memories One" src="{% static 'assets/img/gallery/gallery1.jpg'%}"
+                                    alt="Memories one" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories One"
+                                                href="{% static 'assets/img/gallery/gallery1.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
                         </div>
-                    </div>
-                </div>
-                <!--//.ROW-->
-                <div class="row">
-                    <div id="lgx-owltestimonial-box" class="lgx-owltestimonial lgx-owltestimonial-box">
+                    </div> <!--//.Item-->
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img src="{% static 'assets/img/gallery/gallery2.jpg'%}" alt="Memories Two"
+                                    title="Memories Two" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories Two"
+                                                href="{% static 'assets/img/gallery/gallery2.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> <!--//.Item-->
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img src="{% static 'assets/img/gallery/gallery3.jpg'%}" alt="Memories Three"
+                                    title="Memories Three" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories Three"
+                                                href="{% static 'assets/img/gallery/gallery3.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> <!--//.Item-->
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img src="{% static 'assets/img/gallery/gallery4.jpg'%}" alt="Memories Four"
+                                    title="Memories Four" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories Four"
+                                                href="{% static 'assets/img/gallery/gallery4.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> <!--//.Item-->
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img src="{% static 'assets/img/gallery/gallery5.jpg'%}" alt="Memories Five"
+                                    title="Memories Five" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories Five"
+                                                href="{% static 'assets/img/gallery/gallery5.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> <!--//.Item-->
+                    <div class="item">
+                        <div class="lgx-gallery-single">
+                            <figure>
+                                <img src="{% static 'assets/img/gallery/gallery6.jpg'%}" alt="Memories Six"
+                                    title="Memories Six" />
+                                <figcaption class="lgx-figcaption">
+                                    <div class="lgx-hover-link">
+                                        <div class="lgx-vertical">
+                                            <a title="Memories Six"
+                                                href="{% static 'assets/img/gallery/gallery6.jpg'%}">
+                                                <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div> <!--//.Item-->
+                </div><!--l//#lgx-OWL NEWS-->
+            </div>
+        </section>
 
-                        <div class="item">
-                            <!--Testimonial-single-->
-                            <blockquote class="lgx-testi-single">
-                                <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
-                                <div class="author">
-                                    <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
-                                    <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
-                                    <div class="rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </blockquote> <!--//.Testimonial-single-->
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <!--Testimonial-single-->
-                            <blockquote class="lgx-testi-single">
-                                <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
-                                <div class="author">
-                                    <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
-                                    <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
-                                    <div class="rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </blockquote> <!--//.Testimonial-single-->
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <!--Testimonial-single-->
-                            <blockquote class="lgx-testi-single">
-                                <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
-                                <div class="author">
-                                    <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
-                                    <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
-                                    <div class="rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </blockquote> <!--//.Testimonial-single-->
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <!--Testimonial-single-->
-                            <blockquote class="lgx-testi-single">
-                                <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
-                                <div class="author">
-                                    <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
-                                    <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
-                                    <div class="rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </blockquote> <!--//.Testimonial-single-->
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <!--Testimonial-single-->
-                            <blockquote class="lgx-testi-single">
-                                <p><span>This is the best Restaurant</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
-                                <div class="author">
-                                    <img src="{% static 'assets/img/testimonials/author1.jpg'%}" alt="author">
-                                    <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
-                                    <div class="rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </blockquote> <!--//.Testimonial-single-->
-                        </div> <!--//.Item-->
-                    </div><!--l//#lgx-OWL NEWS-->
-                </div>
-            </div><!-- //.CONTAINER -->
-        </div><!-- //.INNER -->
+        <!--PHOTO GALLERY END-->
+
+
+        {% include 'includes/footer.html' %}
+
     </div>
-</section>
-<!--TESTIMONIALS END-->
+    <!--//.LGX SITE CONTAINER-->
+    <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
+    <!-- JQUERY  -->
+    <script data-cfasync="false"
+        src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
+
+    <!-- BOOTSTRAP JS  -->
+    <script src="{% static 'assets/libs/bootstrap/js/bootstrap.min.js'%}"></script>
+
+
+    <script src="{% static 'assets/libs/jquery.smooth-scroll.js'%}"></script>
+
+    <!-- SKILLS SCRIPT  -->
+    <script src="{% static 'assets/libs/jquery.validate.js'%}"></script>
+
+    <!-- adding magnific popup js library -->
+    <script type="text/javascript" src="{% static 'assets/libs/maginificpopup/jquery.magnific-popup.min.js'%}"></script>
+
+    <!-- Owl Carousel  -->
+    <script src="{% static 'assets/libs/owlcarousel/owl.carousel.min.js'%}"></script>
+
+
+    <!-- bootstrap date picker js with moment js -->
+    <script src="{% static 'assets/libs/datepicker/moment-with-locales.min.js'%}"></script>
+    <script src="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.js'%}"></script>
+
+
+    <!-- Counter JS -->
+    <script src="{% static 'assets/libs/waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/libs/counterup/jquery.counterup.min.js'%}"></script>
+
+    <!-- MENU FILTER   -->
+    <script src="{% static 'assets/libs/isotope/isotope.pkgd.min.js'%}"></script>
+
+    <!-- SMOTH SCROLL -->
+    <script src="{% static 'assets/libs/jquery.smooth-scroll.min.js'%}"></script>
+    <script src="{% static 'assets/libs/jquery.easing.min.js'%}"></script>
+
+    <!-- type js -->
+    <script src="{% static 'assets/libs/typed/typed.min.js'%}"></script>
+
+    <!-- Sticky Sidebar js -->
+    <script src="{% static 'assets/libs/stickysidebar/theia-sticky-sidebar.min.js'%}"></script>
+
+    <!-- CUSTOM SCRIPT  -->
+    <script src="{% static 'assets/js/custom.script.js'%}"></script>
+
+    <div class="lgx-switcher-loader"></div>
+    <!-- For Demo Purpose Only// Remove From Live -->
+    <script src="{% static 'switcher/js/switcherd41d.js?'%}"></script>
+    <!-- For Demo Purpose Only //Remove From Live-->
+
+    <!-- Script for SweetAlert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Include Moment.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- <script>
+        // Assuming you have jQuery available
+        $(document).ready(function () {
+            $('#datetimepicker').datetimepicker({
+                format: 'MM-DD-YYYY'  // Set the desired date format
+            });
+
+            // Assuming a form with the id 'reservationForm'
+            $('#reservationbooking').submit(function () {
+                // Format the date using Moment.js
+                var formattedDate = moment($('#reservationbooking_date').val(), 'MM-DD-YYYY').format('YYYY-MM-DD');
+
+                // Update the input value with the formatted date
+                $('#reservationbooking_date').val(formattedDate);
+            });
+        });
+    </script> -->
+
+    <!-- Script to handle Book reservation form submission -->
+    <!-- <script>
+        function submitForm() {
+            var form = $("#reservationbooking")
+
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (data) {
+                        showPopup("Your reservation details are submitted.", "success")
+                        console.log("Form submitted successfully", data)
+                    },
+                    error: function (error) {
+                        console.log("Form submission failed", error);
+                    }
+                })
+        }
+
+        function showPopup(message, icon) {
+            Swal.fire({
+                position: "center",
+                icon: icon,
+                title: message,
+                showConfirmButton: true,
+                timer: 3000
+            });
+        }
+    </script> -->
 
 
 
-<!--NEWS-->
-<section>
-    <div id="lgx-news" class="lgx-news">
-        <div class="lgx-inner">
-            <div class="container">
-                <div class="row">
 
-                    <div id="lgx-owlnews" class="lgx-owlnews">
-                        <div class="item">
-                            <div class="lgx-news-single">
-                                <div class="date">
-                                    <h4>Aug <span>17</span></h4>
-                                </div>
-                                <div class="news-info">
-                                    <h3 class="title"><a href="news-single.html">Brace for the oil, food and financial Crash of 2018</a></h3>
-                                    <p class="text">Yet the full, striking import of the report, concerning the world’s permanent entry into a new age of global decline, was never really explained. The report didn’t just  ...</p>
-                                    <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <div class="lgx-news-single">
-                                <div class="date">
-                                    <h4>Nov <span>12</span></h4>
-                                </div>
-                                <div class="news-info">
-                                    <h3 class="title"><a href="news-single.html">Why the Next President Will Need a National Food Policy</a></h3>
-                                    <p class="text">Yet the full, striking import of the report, concerning the world’s permanent entry into a new age of global decline, was never really explained. The report didn’t just  ...</p>
-                                    <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <div class="lgx-news-single">
-                                <div class="date">
-                                    <h4>Dec <span>14</span></h4>
-                                </div>
-                                <div class="news-info">
-                                    <h3 class="title"><a href="news-single.html">The Beginners Guide to Composition in Food Photography</a></h3>
-                                    <p class="text">Yet the full, striking import of the report, concerning the world’s permanent entry into a new age of global decline, was never really explained. The report didn’t just  ...</p>
-                                    <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div> <!--//.Item-->
-                        <div class="item">
-                            <div class="lgx-news-single">
-                                <div class="date">
-                                    <h4>Oct <span>02</span></h4>
-                                </div>
-                                <div class="news-info">
-                                    <h3 class="title"><a href="news-single.html">Why our food is the single biggest election issue not on the table</a></h3>
-                                    <p class="text">Yet the full, striking import of the report, concerning the world’s permanent entry into a new age of global decline, was never really explained. The report didn’t just  ...</p>
-                                    <a class="btn lgx-btn lgx-btn-simple" href="news-single.html"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div> <!--//.Item-->
-                    </div><!--l//#lgx-OWL NEWS-->
-                </div>
-            </div><!-- //.CONTAINER -->
-        </div><!-- //.INNER -->
-    </div>
-</section>
-<!--NEWS END-->
+    <script>
+        $(document).ready(function () {
+            // Initialize datetimepicker
+            $('#datetimepicker').datetimepicker({
+                format: 'MM-DD-YYYY'
+            });
 
+            // Submit form function
+            window.submitForm = function () {
+                // Format the date using Moment.js
+                var formattedDate = moment($('#reservationbooking_date').val(), 'MM-DD-YYYY').format('YYYY-MM-DD');
 
+                // Update the input value with the formatted date
+                $('#reservationbooking_date').val(formattedDate);
 
+                // Get the form
+                var form = $("#reservationbooking");
+                // Submit the form using AJAX
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (data) {
+                        showPopup("Your reservation details are submitted.", "success");
+                        console.log("Form submitted successfully", data);
+                    },
+                    error: function (error) {
+                        showPopup("Form submission failed. Please try again.", "error");
+                        console.error("Form submission failed", error);
+                    }
+                });
+            };
 
-    <!--PHOTO GALLERY-->
-    <section>
-        <div id="lgx-photo-gallery" class="lgx-photo-gallery">
-            <div id="lgx-owlgallery" class="lgx-owlgallery">
-                <div class="item">
-                    <div  class="lgx-gallery-single">
-                        <figure>
-                            <img title="Memories One" src="{% static 'assets/img/gallery/gallery1.jpg'%}" alt="Memories one"/>
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories One" href="{% static 'assets/img/gallery/gallery1.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-                <div class="item">
-                    <div  class="lgx-gallery-single">
-                        <figure>
-                            <img src="{% static 'assets/img/gallery/gallery2.jpg'%}" alt="Memories Two" title="Memories Two" />
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories Two" href="{% static 'assets/img/gallery/gallery2.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-                <div class="item">
-                    <div  class="lgx-gallery-single">
-                        <figure>
-                            <img src="{% static 'assets/img/gallery/gallery3.jpg'%}" alt="Memories Three" title="Memories Three" />
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories Three" href="{% static 'assets/img/gallery/gallery3.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-                <div class="item">
-                    <div  class="lgx-gallery-single">
-                        <figure>
-                            <img src="{% static 'assets/img/gallery/gallery4.jpg'%}" alt="Memories Four" title="Memories Four" />
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories Four" href="{% static 'assets/img/gallery/gallery4.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-                <div class="item">
-                    <div class="lgx-gallery-single">
-                        <figure>
-                            <img src="{% static 'assets/img/gallery/gallery5.jpg'%}" alt="Memories Five" title="Memories Five" />
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories Five" href="{% static 'assets/img/gallery/gallery5.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-                <div class="item">
-                    <div class="lgx-gallery-single">
-                        <figure>
-                            <img src="{% static 'assets/img/gallery/gallery6.jpg'%}" alt="Memories Six" title="Memories Six" />
-                            <figcaption class="lgx-figcaption">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <a title="Memories Six" href="{% static 'assets/img/gallery/gallery6.jpg'%}">
-                                            <i class="fa fa-chain-broken" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div> <!--//.Item-->
-            </div><!--l//#lgx-OWL NEWS-->
-        </div>
-    </section>
-    <!--PHOTO GALLERY END-->
-
-
-    {% include 'includes/footer.html' %}
-
-
-
-</div>
-<!--//.LGX SITE CONTAINER-->
-<!-- *** ADD YOUR SITE SCRIPT HERE *** -->
-<!-- JQUERY  -->
-<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
-
-<!-- BOOTSTRAP JS  -->
-<script src="{% static 'assets/libs/bootstrap/js/bootstrap.min.js'%}"></script>
-
-
-<script src="{% static 'assets/libs/jquery.smooth-scroll.js'%}"></script>
-
-<!-- SKILLS SCRIPT  -->
-<script src="{% static 'assets/libs/jquery.validate.js'%}"></script>
-
-<!-- adding magnific popup js library -->
-<script type="text/javascript" src="{% static 'assets/libs/maginificpopup/jquery.magnific-popup.min.js'%}"></script>
-
-<!-- Owl Carousel  -->
-<script src="{% static 'assets/libs/owlcarousel/owl.carousel.min.js'%}"></script>
-
-
-<!-- bootstrap date picker js with moment js -->
-<script src="{% static 'assets/libs/datepicker/moment-with-locales.min.js'%}"></script>
-<script src="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.js'%}"></script>
-
-
-<!-- Counter JS -->
-<script src="{% static 'assets/libs/waypoints.min.js'%}"></script>
-<script src="{% static 'assets/libs/counterup/jquery.counterup.min.js'%}"></script>
-
-<!-- MENU FILTER   -->
-<script src="{% static 'assets/libs/isotope/isotope.pkgd.min.js'%}"></script>
-
-<!-- SMOTH SCROLL -->
-<script src="{% static 'assets/libs/jquery.smooth-scroll.min.js'%}"></script>
-<script src="{% static 'assets/libs/jquery.easing.min.js'%}"></script>
-
-<!-- type js -->
-<script src="{% static 'assets/libs/typed/typed.min.js'%}"></script>
-
-<!-- Sticky Sidebar js -->
-<script src="{% static 'assets/libs/stickysidebar/theia-sticky-sidebar.min.js'%}"></script>
-
-
-
-<!-- CUSTOM SCRIPT  -->
-<script src="{% static 'assets/js/custom.script.js'%}"></script>
-
-<div class="lgx-switcher-loader"></div>
-<!-- For Demo Purpose Only// Remove From Live -->
-<script src="{% static 'switcher/js/switcherd41d.js?'%}"></script>
-<!-- For Demo Purpose Only //Remove From Live-->
-
+            // Show popup function
+            function showPopup(message, icon) {
+                Swal.fire({
+                    position: "center",
+                    icon: icon,
+                    title: message,
+                    showConfirmButton: true,
+                    timer: 3000
+                });
+            }
+        });
+    </script>
 
 </body>
 
-<!-- Mirrored from themearth.com/demo/html/restaura/view/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Dec 2023 03:36:06 GMT -->
 </html>
-
-
-<!-- Original Menu ITEMS list -->
-
-<!-- <div class="lgx-grid-item lunch"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu12.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Strawberry Shortcake</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item drinks breakfast">
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu13.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Roasted prawns coriander</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item dinner"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu14.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Curd cheese dumplings</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item lunch breakfast"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu15.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Salad with blue cheese</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item drinks"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu16.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Chocolate cheesecake</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item drinks dinner"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu17.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Mince & steak pie</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item drinks dinner"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu18.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Veal mini escalopes</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item dinner"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu14.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Pumpkin and goat cheese</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item lunch breakfast"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu15.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Teriyaki salmon</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item dinner"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu13.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Ravioli filled with baked</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="lgx-grid-item lunch breakfast"> 
-    <div class="lgx-single-menu-another">
-        <a href="#">
-            <figure>
-                <img src="{% static 'assets/img/menu/menu12.jpg'%}" alt="course">
-                <figcaption>
-
-                </figcaption>
-            </figure>
-            <div class="menu-info">
-                <div class="info-left">
-                    <h3 class="title">Teriyaki salmon</h3>
-                    <p class="text">Accumsan quis, vulputate sit amet sapien. Curabitur euismod vulputate nulla, non fringilla neque</p>
-                </div>
-                <div class="menu-price">
-                    <span>$</span>50
-                </div>
-            </div>
-        </a>
-    </div>
-</div> -->

@@ -37,31 +37,28 @@
                             <table id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>First name</th>
-                                        <th>Last name</th>
-                                        <th>Phone</th>
+                                        <th>Id</th>
+                                        <th>Full name</th>
+                                        <th>Email ID</th>
+                                        <th>Mobile No.</th>
                                         <th>No. Of guests</th>
                                         <th>Date</th>
                                         <th>Time</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for i in items %}
                                     <tr>
-                                        <td>Chandan</td>
-                                        <td>Gupta</td>
-                                        <td>6381387364</td>
-                                        <td>2</td>
-                                        <td>15.12.2023</td>
-                                        <td>8 PM</td>
+                                        <td>{{i.id}}</td>
+                                        <td>{{i.name}}</td>
+                                        <td>{{i.email}}</td>
+                                        <td>{{i.phoneNumber}}</td>
+                                        <td>{{i.noOfGuests}}</td>
+                                        <td>{{i.reservationDate}}</td>
+                                        <td>{{i.reservationTime}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Chandan</td>
-                                        <td>Gupta</td>
-                                        <td>6381387364</td>
-                                        <td>2</td>
-                                        <td>15.12.2023</td>
-                                        <td>8 PM</td>
-                                    </tr>
+                                    {% endfor %}
+
                                 </tbody>
                             </table>
 
