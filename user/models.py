@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
@@ -26,4 +27,10 @@ class OrdersDetails(models.Model):
     phoneNumber = models.CharField(max_length=10,null=True)
     orderStatus = models.CharField(max_length=10,default='PENDING')
     orderDate = models.DateTimeField(default=timezone.now)
-    
+
+class Customers(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    mobile = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)

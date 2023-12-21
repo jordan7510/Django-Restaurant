@@ -844,56 +844,6 @@
     <!-- Include Moment.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
-    <!-- <script>
-        // Assuming you have jQuery available
-        $(document).ready(function () {
-            $('#datetimepicker').datetimepicker({
-                format: 'MM-DD-YYYY'  // Set the desired date format
-            });
-
-            // Assuming a form with the id 'reservationForm'
-            $('#reservationbooking').submit(function () {
-                // Format the date using Moment.js
-                var formattedDate = moment($('#reservationbooking_date').val(), 'MM-DD-YYYY').format('YYYY-MM-DD');
-
-                // Update the input value with the formatted date
-                $('#reservationbooking_date').val(formattedDate);
-            });
-        });
-    </script> -->
-
-    <!-- Script to handle Book reservation form submission -->
-    <!-- <script>
-        function submitForm() {
-            var form = $("#reservationbooking")
-
-                $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function (data) {
-                        showPopup("Your reservation details are submitted.", "success")
-                        console.log("Form submitted successfully", data)
-                    },
-                    error: function (error) {
-                        console.log("Form submission failed", error);
-                    }
-                })
-        }
-
-        function showPopup(message, icon) {
-            Swal.fire({
-                position: "center",
-                icon: icon,
-                title: message,
-                showConfirmButton: true,
-                timer: 3000
-            });
-        }
-    </script> -->
-
-
-
 
     <script>
         $(document).ready(function () {
@@ -918,6 +868,7 @@
                     url: form.attr('action'),
                     data: form.serialize(),
                     success: function (data) {
+                        form[0].reset()
                         showPopup("Your reservation details are submitted.", "success");
                         console.log("Form submitted successfully", data);
                     },

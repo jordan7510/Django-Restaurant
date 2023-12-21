@@ -39,7 +39,12 @@ class orderDetals(APIView):
 
 
 def cart(req):
-    return render(req, "user-cart.html")
+     records = MenuItems.objects.all()
+     serializer = MenuItemsSerializer(records, many=True)
+     return render(req, "user-cart.html",{"items": serializer.data})
+
+def user_index(req):
+    return render(req, "user_index.html")
 
 
 def login(req):
@@ -54,6 +59,11 @@ def login(req):
                 return redirect('admin/')
     form = AuthenticationForm()
     return render(req, 'login.html', {'form': form})
+
+class signupApiView(APIView):
+    def get(self,req, format=None):
+        return render(req, "signup.html")
+
 
 
 

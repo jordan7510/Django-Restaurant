@@ -1,10 +1,7 @@
 <!doctype html>
 {% load static %}
 <html class="no-js" lang="en">
-
-<!-- Mirrored from themearth.com/demo/html/restaura/view/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Dec 2023 03:35:17 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -65,28 +62,113 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css'%}" media="all" />
     <link rel="stylesheet" href="{% static 'assets/user_cart_css/user-cart.css'%}" media="all" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/cart_header_css/cart_header.css'%}" media="all" />
+    <!-- MASTER  STYLESHEET  -->
+    <link id="lgx-master-style" rel="stylesheet" href="{% static 'assets/css/style-olive.min.css'%}" media="all" />
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="{% static 'assets/libs/fontawesome/css/font-awesome.min.css' %}" media="all" />
+
 
 </head>
 
 <body>
 
-    <!-- USER CART DESIGN -->
+    <!-- HEADER -->
+    <header class="navbar" style="margin-bottom: 0 !important;">
+        <div class="header">
+            <a href="/"><img height="80px" src="{% static 'assets/img/logo-squre-olive.png'%}" class="img-fluid "
+                    alt="logo"></a>
+        </div>
+    </header>
+    <!-- HEADER END -->
 
+    <!--MENU ITEMS-->
+    <section>
+        <div id="lgx-menu" class="lgx-menu"> <!--lgx-menu-white-->
+            <div class="lgx-inner" style="padding: unset !important;">
+                <div class="container" style="margin-top: unset !important;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading lgx-heading-white" style="margin: 15px 0px !important;">
+                                <h2 class="heading-title">Offerd Menu</h2>
+                                <h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.ROW-->
+                </div>
+                <div class="container-fluids section-gap">
+                    <div class="lgx-tab lgx-tab-another"> <!--lgx-tab-another lgx-tab-another2-->
+                        <div class="lgx-filter-area">
+                            <ul id="lgx-filter" class="lgx-filter list-inline">
+                                <li class="active"><a class="lgx-filter-item" href="javascript:void(0)"
+                                        data-filter="*">All Items<span>Fresh & Delicious</span></a></li>
+                                <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                        data-filter=".breakfast">Pizza<span>Fresh & Delicious</span></a></li>
+                                <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".lunch">Soup
+                                        <span>Fresh & Delicious</span></a></li>
+                                <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                        data-filter=".dinner">Kabab<span>Fresh & Delicious</span></a></li>
+                                <li><a class="lgx-filter-item" href="javascript:void(0)"
+                                        data-filter=".drinks">Stack<span>Fresh & Delicious</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lgx-menu-container">
+
+                            <div id="lgx-grid-wrapper" class="lgx-grid-wrapper lgx-grid-wrapper-gap">
+                                <!--lgx-grid-wrapper-gap-->
+                                {% for item in items %}
+                                <div class="lgx-grid-item breakfast">
+                                    <!-- lgx-grid-item-col1 lgx-grid-item-col2 lgx-grid-item-col3 lgx-grid-item-col4-->
+                                    <div class="lgx-single-menu-another">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="{{ item.item_image }}" alt="course">
+                                                <figcaption>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="menu-info">
+                                                <div class="info-left">
+                                                    <h3 class="title">{{item.item_name}}</h3>
+                                                    <p class="text">{{item.item_desc}}</p>
+                                                </div>
+                                                <div class="menu-price">
+                                                    <span>₹</span>{{item.item_price}}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <!--//ITEM-->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//.MENU ITEMS END-->
+
+
+    <!-- USER CART DESIGN -->
     <div class="container padding-bottom-3x mb-1  ">
+        <div class="text-center ">
+            <h3><u>Checkout</u></h3>
+        </div>
         <!-- Shopping Cart-->
         <div class="table-responsive shopping-cart border-2">
             <table class="table">
-                <thead>
+                <thead style="margin-top: 1px solid black !important;">
                     <tr>
                         <th>Product Name</th>
                         <th class="text-center">Quantity</th>
-                        <th class="text-center">Subtotal</th>
                         <th class="text-center">Discount</th>
-                        <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#">Clear Cart</a></th>
+                        <th class="text-center">Amount</th>
+                        <th class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -101,9 +183,9 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" >
                             <div class="count-input">
-                                <select class="form-control">
+                                <select class="form-control ">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -112,110 +194,109 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center text-lg text-medium">$43.90</td>
                         <td class="text-center text-lg text-medium">$18.00</td>
-                        <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title=""
-                                data-original-title="Remove item"><i class="fa fa-trash"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="product-item">
-                                <a class="product-thumb" href="#"><img
-                                        src="https://www.bootdey.com/image/220x180/5F9EA0/000000" alt="Product"></a>
-                                <div class="product-info">
-                                    <h4 class="product-title"><a href="#">Daily Fabric Cap</a></h4><span><em>Size:</em>
-                                        XL</span><span><em>Color:</em> Black</span>
-                                </div>
-                            </div>
-                        </td>
+                        <td class="text-center text-lg text-medium">$43.90</td>
                         <td class="text-center">
-                            <div class="count-input">
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option selected="">2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
+                            <button class="btn btn-sm  btn-danger ">Remove item</button>
                         </td>
-                        <td class="text-center text-lg text-medium">$24.89</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title=""
-                                data-original-title="Remove item"><i class="fa fa-trash"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="product-item">
-                                <a class="product-thumb" href="#"><img
-                                        src="https://www.bootdey.com/image/220x180/9932CC/000000" alt="Product"></a>
-                                <div class="product-info">
-                                    <h4 class="product-title"><a href="#">Cole Haan Crossbody</a></h4>
-                                    <span><em>Size:</em> -</span><span><em>Color:</em> Turquoise</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center">
-                            <div class="count-input">
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center text-lg text-medium">$200.00</td>
-                        <td class="text-center">—</td>
-                        <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title=""
-                                data-original-title="Remove item"><i class="fa fa-trash"></i></a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
         <div class="shopping-cart-footer">
-            <div class="column">
+            <!-- <div class="column">
                 <form class="coupon-form" method="post">
                     <input class="form-control form-control-sm" type="text" placeholder="Coupon code" required="">
                     <button class="btn btn-outline-primary btn-sm" type="submit">Apply Coupon</button>
                 </form>
+            </div> -->
+            <div class="column text-lg">
+                <p>Sub total: <span class="text-medium">₹200</span></p>
+                <p>GST: <span class="text-medium">₹89</span></p>
+                <strong>
+                    <p>Total: <span class="text-medium">₹289</span></p>
+                </strong>
             </div>
-            <div class="column text-lg">Subtotal: <span class="text-medium">$289.68</span></div>
         </div>
+
         <div class="shopping-cart-footer">
-            <div class="column"><a class="btn btn-outline-secondary" href="#"><i class="icon-arrow-left"></i>&nbsp;Back
-                    to Shopping</a></div>
-            <div class="column"><a class="btn btn-primary" href="#" data-toast="" data-toast-type="success"
+            <div class="column">
+                <a class="btn btn-outline-secondary" href="/"><i class="icon-arrow-left"></i>&nbsp;Back
+                    to Shopping</a>
+            </div>
+
+            <div class="column">
+                <!-- <a class="btn btn-primary" href="#" data-toast="" data-toast-type="success"
                     data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart"
-                    data-toast-message="is updated successfully!">Update Cart</a><a class="btn btn-success"
-                    href="#">Checkout</a></div>
+                    data-toast-message="is updated successfully!">Update Cart</a> -->
+                <a class="btn btn-success" href="#">Checkout</a>
+            </div>
         </div>
+
     </div>
 
 
 
     <!-- USER CART DESIGN END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- BOOTSTRAP JS  -->
     <script src="{% static 'assets/libs/bootstrap/js/bootstrap.min.js'%}"></script>
     <!-- SMOTH SCROLL -->
     <script src="{% static 'assets/libs/jquery.smooth-scroll.min.js'%}"></script>
+
+
+    <!-- JQUERY  -->
+    <script data-cfasync="false"
+        src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
+
+    <!-- BOOTSTRAP JS  -->
+    <script src="{% static 'assets/libs/bootstrap/js/bootstrap.min.js'%}"></script>
+
+
+    <script src="{% static 'assets/libs/jquery.smooth-scroll.js'%}"></script>
+
+    <!-- SKILLS SCRIPT  -->
+    <script src="{% static 'assets/libs/jquery.validate.js'%}"></script>
+
+    <!-- adding magnific popup js library -->
+    <script type="text/javascript" src="{% static 'assets/libs/maginificpopup/jquery.magnific-popup.min.js'%}"></script>
+
+    <!-- Owl Carousel  -->
+    <script src="{% static 'assets/libs/owlcarousel/owl.carousel.min.js'%}"></script>
+
+
+    <!-- bootstrap date picker js with moment js -->
+    <script src="{% static 'assets/libs/datepicker/moment-with-locales.min.js'%}"></script>
+    <script src="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.js'%}"></script>
+
+
+    <!-- Counter JS -->
+    <script src="{% static 'assets/libs/waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/libs/counterup/jquery.counterup.min.js'%}"></script>
+
+    <!-- MENU FILTER   -->
+    <script src="{% static 'assets/libs/isotope/isotope.pkgd.min.js'%}"></script>
+
+    <!-- SMOTH SCROLL -->
+    <script src="{% static 'assets/libs/jquery.smooth-scroll.min.js'%}"></script>
+    <script src="{% static 'assets/libs/jquery.easing.min.js'%}"></script>
+
+    <!-- type js -->
+    <script src="{% static 'assets/libs/typed/typed.min.js'%}"></script>
+
+    <!-- Sticky Sidebar js -->
+    <script src="{% static 'assets/libs/stickysidebar/theia-sticky-sidebar.min.js'%}"></script>
+
+    <!-- CUSTOM SCRIPT  -->
+    <script src="{% static 'assets/js/custom.script.js'%}"></script>
+
+    <div class="lgx-switcher-loader"></div>
+    <!-- For Demo Purpose Only// Remove From Live -->
+    <script src="{% static 'switcher/js/switcherd41d.js?'%}"></script>
+    <!-- For Demo Purpose Only //Remove From Live-->
+
 </body>
 
 </html>

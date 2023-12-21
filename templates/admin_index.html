@@ -20,8 +20,42 @@
 
     <div id="layoutSidenav">
 
-        {% include 'includes/admin_sidenav.html' %}
-       
+        <!-- {% include 'includes/admin_sidenav.html' %} -->
+        <!-- Sidenav -->
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Management</div>
+                        <a class="nav-link" href="{% url 'adminOrders' %}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            Orders
+                        </a>
+                        <a class="nav-link" href="{% url 'adminreserv' %}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            Reservations
+                        </a>
+                        <a class="nav-link" href="{% url 'adminitems' %}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            Items
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Super Admin
+                </div>
+            </nav>
+        </div>
+        <!-- Sidenav end -->
+
+
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
@@ -60,17 +94,17 @@
                                         <td>
                                             <div class="d-flex align-items-center justify-content-center gap-3">
                                                 <button data-bs-toggle="modal" data-bs-target="#editItemModal"
-                                                  class="btn btn-success btn-sm">Confirm</button>
-                        
-                                             
-                        
+                                                    class="btn btn-success btn-sm">Confirm</button>
+
+
+
                                                 <button data-bs-toggle="modal" data-bs-target="#deleteItemModal"
-                                                  class="btn btn-danger btn-sm">Reject</button>
-                        
-                                             
-                                              </div>
+                                                    class="btn btn-danger btn-sm">Reject</button>
+
+
+                                            </div>
                                         </td>
-                                      
+
                                     </tr>
                                     {% endfor %}
                                 </tbody>

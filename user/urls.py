@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import reservationDetails, orderDetals
+from .views import reservationDetails, orderDetals, signupApiView
 from .views import *
 
 urlpatterns = [
@@ -9,4 +9,6 @@ urlpatterns = [
     path("add-reservation", reservationDetails.as_view(), name='add-reservation'),
     path("user-cart", views.cart, name='user-cart'),
     path("login", views.login, name='login'),
+    path("user", views.user_index, name='user'),
+    path("signup",signupApiView.as_view(), name='signup'),
 ]
