@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import MenuItems, ReservationDetails, OrdersDetails
+from .models import MenuItems, ReservationDetails, OrdersDetails, UserReviewModel
 
 
 
@@ -16,4 +16,9 @@ class ReservationSerializer(serializers.ModelSerializer):
 class OrdersSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrdersDetails
+        fields = '__all__'
+
+class UserReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserReviewModel
         fields = '__all__'

@@ -1,0 +1,13 @@
+#navbar .dropdown-menu{
+    /* background-color: chocolate !important; */
+    text-align: right !important;
+}
+
+#navbar .dropdown-menu a{
+    padding: 0px  !important;
+    margin: 0px 10px 10px 0px;
+    /* margin-top: 20px; */
+}
+#navbar .dropdown-menu a:hover{
+    color: black !important;
+}

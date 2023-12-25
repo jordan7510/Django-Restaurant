@@ -81,16 +81,18 @@
 
     <div id="user_menu">
         <div class="user-nav">
-            <button class="menu-link active" data-target="orders-details">My Cart</button>
-            <!-- {% if user.is_authenticated %}
-            <button class="menu-link" data-target="user-details">User details</button>
+            <!-- <button class="menu-link active" data-target="orders-details">My Cart</button> -->
+            {% if user.is_authenticated %}
+            <button class="menu-link active" data-target="user-details">User details</button>
+            <button class="menu-link" data-target="orders-section">My Orders</button>
             <button class="menu-link" data-target="reservation-details">Reservations</button>
-            {% endif %} -->
+            <button class="menu-link" data-target="review-section">Reviews</button>
+            {% endif %}
         </div>
 
         <div class="view-box">
 
-            <div class="orders-details active content-section">
+            <!-- <div class="orders-details active content-section">
                 <div class="menu-tab">
                     <button class="item-type-button active" data-type="all">All Menu</button>
                     {% for item in items %}
@@ -111,14 +113,10 @@
                     </div>
                     {% endfor %}
                 </div>
-            </div>
-
-
-            <!-- <div class="reservation-details content-section">
-                
             </div> -->
 
-            <!-- <div class="user-details content-section">
+            
+            <div class="user-details active content-section">
                 <div class="outer-box">
                     <div class="inner-box">
                         <div class="img-wrapper">
@@ -132,15 +130,28 @@
                             </div>
                             <div>
                                 <p><u>Contact Details:</u></p>
+                                <!-- <p><b>Mobile:</b> <span>6381387364</span></p> -->
                                 <p><b>Email:</b> <span>{{user.email}}</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
+            <div class="orders-section content-section">
+                <h3>Orders section</h3>
+            </div>
+
+
+            <div class="reservation-details content-section">
+                <h3>Reservation Details</h3>
+            </div>
+
+            <div class="review-section content-section">
+                <h3>Reviews section</h3>
+            </div>
 
         </div>
-
     </div>
 
 
@@ -162,6 +173,38 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>
+                            <div class="product-item">
+                                <a class="product-thumb" href="#">
+                                    <img src="https://www.bootdey.com/image/220x180/FF0000/000000" alt="Product">
+                                </a>
+                                <div class="product-info">
+                                    <h4 class="product-title">
+                                        <p>Item Name</p>
+                                    </h4>
+                                    <!-- <span><em>Size:</em>10.5</span> -->
+                                    <span><em>Price:</em> ₹199 </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="count-input">
+                                <select class="form-control ">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </td>
+                        <!-- <td class="text-center text-lg text-medium">₹18</td> -->
+                        <td class="text-center text-lg text-medium">₹200</td>
+                        <td class="text-center">
+                            <button class="btn btn-sm  btn-danger ">Remove item</button>
+                        </td>
+                    </tr>  
                 </tbody>
             </table>
         </div>
@@ -169,10 +212,10 @@
         <div class="shopping-cart-footer">
 
             <div class="column text-lg">
-                <p>Sub total: <span class="text-medium"></span></p>
-                <p>GST @ 5% : <span class="text-medium"></span></p>
+                <p>Sub total: <span class="text-medium">₹200</span></p>
+                <p>GST @ 5% : <span class="text-medium">₹89</span></p>
                 <strong>
-                    <p>Total: <span class="text-medium"></span></p>
+                    <p>Total: <span class="text-medium">₹289</span></p>
                 </strong>
             </div>
         </div>
@@ -301,160 +344,40 @@
         });
     </script>
 
-    <!-- Script to handle add and remove items in the cart -->
-
-    <!-- ... (your existing HTML code) ... -->
-
+    <!-- Script to handle add and remove items in the card -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function(){
             var itemDetails = document.querySelectorAll(".items-details");
             var tableBody = document.querySelector(".table tbody");
-            var subtotalElement = document.querySelector(".shopping-cart-footer .column span.text-medium");
-            var gstElement = document.querySelector(".shopping-cart-footer p:nth-child(2) span.text-medium");
-            var totalAmountElement = document.querySelector(".shopping-cart-footer strong span.text-medium");
 
-            // Initialize total amount variables
-            var cart = JSON.parse(localStorage.getItem('cart')) || [];
-            var subtotal = 0;
-            var gst = 0;
-            var totalAmount = 0;
-
-            // Function to update local storage, recalculate amounts, and render the cart
-            function updateCartAndAmounts() {
-                localStorage.setItem('cart', JSON.stringify(cart));
-
-                // Recalculate subtotal, GST, and total amount
-                calculateAmounts();
-
-                // Render the updated cart
-                renderCart();
-            }
-
-            // Function to calculate amounts based on the current cart
-            function calculateAmounts() {
-                subtotal = 0;
-
-                // Iterate through items in the cart
-                cart.forEach(function (cartItem) {
-                    subtotal += cartItem.amount;
-                });
-
-                // Display the updated subtotal
-                subtotalElement.innerText = `₹${subtotal.toFixed(2)}`;
-
-                // Calculate GST (5% of subtotal)
-                gst = subtotal * 0.05;
-                gstElement.innerText = `₹${gst.toFixed(2)}`;
-
-                // Calculate total amount
-                totalAmount = subtotal + gst;
-                totalAmountElement.innerText = `₹${totalAmount.toFixed(2)}`;
-            }
-
-            // Function to render cart items
-            function renderCart() {
-                tableBody.innerHTML = "";
-
-                // Iterate through items in the cart
-                cart.forEach(function (cartItem) {
-                    var newRow = document.createElement("tr");
-                    newRow.innerHTML = `
-                <td>
-                    <div class="product-item">
-                        <a class="product-thumb" href="#">
-                            <img src="${cartItem.imgSource}" alt="${cartItem.name}">
-                        </a>
-                        <div class="product-info">
-                            <h4 class="product-title">
-                                <p>${cartItem.name}</p>
-                            </h4>
-                            <span><em>Price:</em> ₹${cartItem.price.toFixed(2)}</span>
-                        </div>
-                    </div>
-                </td>
-                <td class="text-center">
-                    <div class="count-input">
-                        <select class="form-control quantity-select" data-index="${cartItem.index}">
-                            ${Array.from({ length: 5 }, (_, i) => i + 1)
-                            .map(qty => `<option value="${qty}" ${cartItem.quantity === qty ? 'selected' : ''}>${qty}</option>`)
-                            .join('')}
-                        </select>
-                    </div>
-                </td>
-                <td class="text-center text-lg text-medium amount-cell">₹${cartItem.amount.toFixed(2)}</td>
-                <td class="text-center">
-                    <button class="btn btn-sm btn-danger remove-item" data-index="${cartItem.index}">Remove item</button>
-                </td>
-            `;
-
-                    tableBody.appendChild(newRow);
-
-                    // Retrieve the quantity select and amount cell elements
-                    var quantitySelect = newRow.querySelector(".quantity-select");
-                    var amountCell = newRow.querySelector(".amount-cell");
-
-                    // Add event listener to handle quantity change
-                    quantitySelect.addEventListener("change", function () {
-                        // Retrieve the index of the item in the cart
-                        var itemIndex = parseInt(this.dataset.index);
-
-                        // Update the quantity in the cart
-                        cart[itemIndex].quantity = parseInt(this.value);
-
-                        // Update the amount in the cart
-                        cart[itemIndex].amount = cart[itemIndex].price * cart[itemIndex].quantity;
-
-                        // Update the displayed amount in the table
-                        amountCell.innerText = `₹${cart[itemIndex].amount.toFixed(2)}`;
-
-                        // Update local storage and recalculate amounts
-                        updateCartAndAmounts();
-                    });
-
-                    // Add event listener to the "Remove item" button
-                    newRow.querySelector(".remove-item").addEventListener("click", function () {
-                        // Retrieve the index of the item in the cart
-                        var itemIndex = parseInt(this.dataset.index);
-
-                        // Remove the item from the cart
-                        cart.splice(itemIndex, 1);
-
-                        // Update local storage and recalculate amounts
-                        updateCartAndAmounts();
-                    });
-                });
-            }
-
-            // Render the initial cart on page load
-            calculateAmounts();
-            renderCart();
-
-            // Event listener for adding items to the cart
-            itemDetails.forEach(function (item) {
-                item.addEventListener("click", function () {
-                    // Extract item details
+            itemDetails.forEach(function(item){
+                item.addEventListener("click",function(){
+                    // var itemId = item.querySelector(".items-details").id;
                     var itemName = item.querySelector("h3").innerText;
-                    var itemPrice = parseFloat(item.querySelector(".item-price").innerText.replace("₹", ""));
+                    var itemDesc = item.querySelector(".item-desc").innerText;
+                    var itemPrice = item.querySelector(".item-price").innerText;
+                    var itemSource = item.querySelector(".item-price").innerText;
                     var itemImgSource = item.querySelector(".item-image").src;
 
-                    // Add the item to the cart
-                    var newItem = {
-                        name: itemName,
-                        price: itemPrice,
-                        imgSource: itemImgSource,
-                        quantity: 1,
-                        amount: itemPrice,
-                        index: cart.length // Assign the index based on the current length of the cart
-                    };
+                    var selectedItemDetails = {
+                        name:itemName,
+                        desc:itemDesc,
+                        price:itemPrice,
+                        imgSoruce:itemImgSource,
+                    }
 
-                    cart.push(newItem);
+                    var storedItems = JSON.parse(localStorage.getItem("cartItems")) || []
+                    storedItems.push(selectedItemDetails)
+                    localStorage.setItem("cartItems",JSON.stringify(storedItems));
 
-                    // Update local storage and recalculate amounts
-                    updateCartAndAmounts();
-                });
-            });
-        });
+                    var updatedCartItems = JSON.parse(localStorage.getItem("cartItems"))
+                    console.log(updatedCartItems);
+
+                })
+            })
+        })
     </script>
+
 
 
 </body>

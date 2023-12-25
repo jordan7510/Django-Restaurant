@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import MenuItems, OrdersDetails
 from .serializers import ReservationSerializer, OrdersSerializer, MenuItemsSerializer
@@ -41,7 +42,8 @@ class orderDetals(APIView):
 def cart(req):
      records = MenuItems.objects.all()
      serializer = MenuItemsSerializer(records, many=True)
-     return render(req, "user-cart.html",{"items": serializer.data})
+     userDetails = User.objects.all()
+     return render(req, "user-cart.html",{"items": serializer.data,"userDetails":userDetails})
 
 def user_index(req):
     return render(req, "user_index.html")
@@ -57,12 +59,37 @@ def login(req):
             if user.is_superuser:
                 auth_login(req,user)
                 return redirect('admin/')
+            else:
+               auth_login(req,user)
+               return redirect('/')
+   
     form = AuthenticationForm()
     return render(req, 'login.html', {'form': form})
 
-class signupApiView(APIView):
-    def get(self,req, format=None):
-        return render(req, "signup.html")
+def user_profile(request):
+    return render(request, "user-profile.html")
+
+
+def logout_view(request):
+    logout(request)
+    # Redirect to a page after logout (e.g., home page)
+    return redirect('/') 
+
+
+def signupApiView(req):
+    if req.method =="POST":
+        first_name= req.POST['first_name']
+        last_name= req.POST['last_name']
+        email= req.POST['email']
+        mobile= req.POST['mobile']
+        password= req.POST['password']
+        my_user = User.objects.create_user(username=email,email=email,password=password)
+        my_user.first_name=first_name
+        my_user.last_name=last_name
+        my_user.save()
+        return redirect("/")
+    
+    return render(req, "signup.html")
 
 
 

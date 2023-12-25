@@ -2,32 +2,59 @@
 <!--HEADER-->
 <header>
     <div id="lgx-header" class="lgx-header">
-        <div class="lgx-header-position lgx-header-position-fixed lgx-header-position-white"> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
+        <div class="lgx-header-position lgx-header-position-fixed lgx-header-position-white">
+            <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
             <div class="lgx-container"> <!--lgx-container-fluid-->
                 <nav class="navbar navbar-default lgx-navbar">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <div class="lgx-logo lgx-logo-fixed lgx-logo-fixed-tpmenu lgx-logo-white"> <!--lgx-logo-fixed lgx-logo-fixed-tpmenu lgx-logo-white lgx-logo-black-->
+                        <div class="lgx-logo lgx-logo-fixed lgx-logo-fixed-tpmenu lgx-logo-white">
+                            <!--lgx-logo-fixed lgx-logo-fixed-tpmenu lgx-logo-white lgx-logo-black-->
                             <a href="{% url 'homepage' %}" class="lgx-scroll">
-                                <img src="{% static 'assets/img/logo-squre-olive.png'%}" alt="Restaura Logo"/>
+                                <img src="{% static 'assets/img/logo-squre-olive.png'%}" alt="Restaura Logo" />
                             </a>
                         </div>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse lgx-collapse">
                         <ul class="nav navbar-nav lgx-nav">
                             <li>
-                                <a href="{% url 'homepage' %}" class=" active"  role="button">Home</a>
+                                <a href="{% url 'homepage' %}" class=" active" role="button">Home</a>
                             <li>
                             <li><a class="lgx-scroll active" href="#lgx-about">About</a></li>
                             <li><a class="lgx-scroll" href="#lgx-menu">Menu</a></li>
                             <li><a class="lgx-scroll" href="#lgx-news">News</a></li>
-                            <li><a class="lgx-scroll btn lgx-btn" href="#lgx-reservation"><span>Reservation</span></a></li>
+                            <li>
+                                <a class="lgx-scroll btn lgx-btn" href="#lgx-reservation"><span>Reservation<span></a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li class="lgx-scroll">
+                                <div class="dropdown show">
+                                    <a class="lgx-scroll btn lgx-btn dropdown-toggl" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>{{user.first_name}}<span>
+                                    </a>
+
+                                    <!-- <a class="lgx-scroll btn lgx-btn dropdown-toggle" href="#" role="button"
+                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        {{user.first_name}}
+                                    </a> -->
+
+                                    <div  class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item py-4 text-right " href="user-profile">Profile</a>
+                                        <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                                        <a c class="dropdown-item py-4 text-right" href="logout/">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                            {% else %}
                             <li><a class="lgx-scroll btn lgx-btn" href="login"><span>LOGIN</span></a></li>
+                            {% endif %}
                         </ul>
                         <div class="lgx-nav-right">
                             <div class="lgx-cart-area">

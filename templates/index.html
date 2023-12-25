@@ -82,7 +82,6 @@
 
     <link rel="stylesheet" href="{% static 'assets/libs/animate/animate.css'%}" media="all" />
 
-
     <!-- bootstrap datepicker -->
     <link rel="stylesheet" href="{% static 'assets/libs/datepicker/bootstrap-datetimepicker.min.css'%}" media="all" />
 
@@ -91,6 +90,10 @@
 
     <!-- MODERNIZER CSS  -->
     <script src="{% static 'assets/js/vendor/modernizr-2.8.3.min.js'%}"></script>
+
+     <!-- Custom header CSS  -->
+     <link rel="stylesheet" href="{% static 'assets/css/header_css/header.css'%}" media="all" />
+
 
 </head>
 
@@ -279,16 +282,26 @@
                         <div class="lgx-tab lgx-tab-another"> <!--lgx-tab-another lgx-tab-another2-->
                             <div class="lgx-filter-area">
                                 <ul id="lgx-filter" class="lgx-filter list-inline">
-                                    <li class="active"><a class="lgx-filter-item" href="javascript:void(0)"
-                                            data-filter="*">All Items<span>Fresh & Delicious</span></a></li>
-                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
-                                            data-filter=".breakfast">Pizza<span>Fresh & Delicious</span></a></li>
-                                    <li><a class="lgx-filter-item" href="javascript:void(0)" data-filter=".lunch">Soup
-                                            <span>Fresh & Delicious</span></a></li>
-                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
-                                            data-filter=".dinner">Kabab<span>Fresh & Delicious</span></a></li>
-                                    <li><a class="lgx-filter-item" href="javascript:void(0)"
-                                            data-filter=".drinks">Stack<span>Fresh & Delicious</span></a></li>
+                                    <li class="active">
+                                        <a class="lgx-filter-item" href="javascript:void(0)" data-filter="*">All
+                                            Items<span>Fresh & Delicious</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter=".Breakfast">Breakfast<span>Fresh & Delicious</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="lgx-filter-item" href="javascript:void(0)" data-filter=".Lunch">Lunch<span>Fresh & Delicious</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="lgx-filter-item" href="javascript:void(0)"
+                                            data-filter=".Dinner">Dinner<span>Fresh & Delicious</span>
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
 
@@ -297,7 +310,7 @@
                                 <div id="lgx-grid-wrapper" class="lgx-grid-wrapper lgx-grid-wrapper-gap">
                                     <!--lgx-grid-wrapper-gap-->
                                     {% for item in items %}
-                                    <div class="lgx-grid-item breakfast">
+                                    <div class="lgx-grid-item {{ item.item_type }}">
                                         <!-- lgx-grid-item-col1 lgx-grid-item-col2 lgx-grid-item-col3 lgx-grid-item-col4-->
                                         <div class="lgx-single-menu-another">
                                             <a href="#">

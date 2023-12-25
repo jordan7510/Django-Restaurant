@@ -2,6 +2,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -25,7 +26,7 @@ select.form-control {
     border-radius: 22px;
     background-color: #fff;
     color: #606975;
-    /* font-family: "Maven Pro",Helvetica,Arial,sans-serif; */
+    font-family: "Maven Pro",Helvetica,Arial,sans-serif;
     font-size: 14px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -124,6 +125,196 @@ select.form-control {
     display: block;
     width: 100%
 }
+
+/*========================User menu CSS ======================*/
+#user_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#user_menu .user-nav{
+    width: 85vw;
+    height: 10vh;
+    /* background-color: aqua; */
+    /* border: 1px solid black; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    gap: 30px;
+    margin: 15px 0;
+}
+
+
+#user_menu .user-nav button{
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #86BC42;
+    color: #86BC42;
+    background-color: white;
+}
+
+#user_menu .view-box .orders-details{
+    width: 85vw;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+#user_menu .view-box .user-details{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+
+#user_menu .view-box .menu-tab{
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 15px;
+    margin: 10px;
+}
+#user_menu .view-box .menu-tab button{
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #86BC42;
+    color: #86BC42;
+    background-color: white;
+}
+
+#user_menu .orders-details .items-details{
+    padding: 10px 15px;
+    gap: 20px;
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#user_menu .orders-details .items-box{
+    /* width: 20vw; */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+#user_menu .items-details .img-wrapper{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px ;
+    overflow: hidden;
+}
+#user_menu .items-details .img-wrapper img{
+   height: auto;
+   max-width: 100%; 
+   transition: 0.5s;
+}
+
+#user_menu .items-details:hover img {
+    transform: scale(130%); 
+}
+#user_menu .items-details:hover{
+    cursor: pointer;
+}
+
+#user_menu .items-details .content-wrapper{
+    max-width: 150px;
+    overflow: hidden;
+}
+
+#user_menu .user-nav .menu-link.active {
+    background-color: #86BC42;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+
+#user_menu .content-section {
+    display: none;
+}
+
+#user_menu .content-section.active {
+    display: block;
+}
+
+
+
+.items-details {
+    display: none;
+}
+
+.items-details.active {
+    display: flex;
+}
+
+#user_menu .view-box .menu-tab button.active {
+    /* your active styles here, for example: */
+    background-color: #86BC42;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+/* Reservation details css start */
+
+.user-details .outer-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 30px 20px;
+}
+.user-details .outer-box .inner-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 39px
+}
+.user-details .outer-box .inner-box .img-wrapper{
+    height: 150px;
+    width: 150px;
+    border: 1px solid #DDDDDD;
+    overflow: hidden;
+    border-radius: 50%; 
+}
+.user-details .outer-box .inner-box .img-wrapper img{
+    height: auto;
+    width: 100%;
+}
+.inner-box:nth-child(1){
+    border-right: 1px solid #DDDDDD;
+}
+
+
+
+
+
+
+
+/* Reservation details css end */
+@media only screen and (max-width: 585px) {
+    .user-details .outer-box{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+  }
+
+/*===================== User menu CSS end===================== */
 
 @media screen and (max-width: 860px) {
     .shopping-cart .product-item .product-thumb,

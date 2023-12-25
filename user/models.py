@@ -28,9 +28,11 @@ class OrdersDetails(models.Model):
     orderStatus = models.CharField(max_length=10,default='PENDING')
     orderDate = models.DateTimeField(default=timezone.now)
 
-class Customers(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
-    mobile = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
+
+class UserReviewModel(models.Model):
+    message = models.TextField()
+    customer_name = models.CharField(max_length=255)
+    stars = models.PositiveIntegerField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, default='pending')
+  

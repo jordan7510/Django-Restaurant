@@ -1,5 +1,5 @@
 {% load static %}
-<!-- <div id="layoutSidenav_nav">
+<div id="layoutSidenav_nav">
   <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
       <div class="nav">
@@ -17,16 +17,35 @@
           Reservations
         </a>
         <a class="nav-link" href="{% url 'adminitems' %}">
-            <div class="sb-nav-link-icon">
-              <i class="fas fa-tachometer-alt"></i>
-            </div>
-            Items
-          </a>
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          Items
+        </a>
+        <a class="nav-link" href="{% url 'adminitems' %}">
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          Reviews
+        </a>
+        <a class="nav-link" href="{% url 'adminitems' %}">
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          News
+        </a>
+        <a class="nav-link" href="{% url 'adminitems' %}">
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          Gallery
+        </a>
       </div>
     </div>
     <div class="sb-sidenav-footer">
       <div class="small">Logged in as:</div>
-      Super Admin
+      {{user.first_name}}
+      {{user.last_name}}
     </div>
   </nav>
-</div> -->
+</div>
