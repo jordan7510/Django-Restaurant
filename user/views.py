@@ -11,8 +11,6 @@ from .serializers import ReservationSerializer, OrdersSerializer, MenuItemsSeria
 
 
 # Create your views here.
-
-
 class reservationDetails(APIView):
     def post(self, req, format=None):
         serializer = ReservationSerializer(data=req.data)
